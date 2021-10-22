@@ -6120,11 +6120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aaron\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Aaron\\source\\repos\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Aaron\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Aaron\\source\\repos\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aaron\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\Aaron\\source\\repos\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
