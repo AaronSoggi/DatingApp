@@ -14,7 +14,7 @@ namespace API.SQLConnection
     }
     public class DBConnection : IDBConnection
     {
-        public SqlConnection con = new SqlConnection(@"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DatingSite;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Server=(localdb)\\MSSQLLocalDB;DataBase=DatingSite;Trusted_Connection=True");
         public SqlConnection GetConnection()
         {
             return con;

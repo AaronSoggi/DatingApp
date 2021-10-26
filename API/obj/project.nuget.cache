@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tfs9VrOgyUYEUfkn0vRc4T2yiXb1xvOqKbtJ3PrKpVc5yOfdoviRtCTz/JkHMRt9dJNlPVY7gZ30pnbuwvq2bQ==",
+  "dgSpecHash": "et31dZkjxpkM2Lv2jwLqwCXOudsmN8ygJWjYeA5EvFSTHDcVfP80CgYtclUWwceTy68qkpNSU4x5gq00Ok1HLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aaron\\source\\repos\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.typescript.msbuild\\4.4.4\\microsoft.typescript.msbuild.4.4.4.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",

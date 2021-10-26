@@ -33,8 +33,9 @@ namespace API
                 options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<IDBConnection, DBConnection>();
-            services.AddHttpContextAccessor();
+            //services.AddHttpContextAccessor();
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
@@ -54,6 +55,8 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200")); // added 
 
             app.UseAuthorization();
 
