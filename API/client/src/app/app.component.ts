@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'The Dating App';
   users: any;
-  
-  constructor(private http: HttpClient) { } // declare thing we are about to inject as a private or public variable. 
+
+  constructor(private http: HttpClient) { } // declare thing we are about to inject as a private or public variable.
   
   ngOnInit() {
     this.getUsers();

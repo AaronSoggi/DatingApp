@@ -11,12 +11,11 @@ using API.SQLConnection;
 using System.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[Controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseApiController
     {
         private readonly IDBConnection _isqlConnection;
         private readonly DataContext _context; // here we have used dependency injection so that we can access the data from the DataContext class.
@@ -26,11 +25,14 @@ namespace API.Controllers
             _context = context;
         }
      
+        
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<AppUser>>>GetUsers() // we are going to be returning a type of action result. 
         {            
             return await _context.Users.ToListAsync();                          
         }
+        [Authorize]
         [HttpGet("{id}")]
         public async  Task<ActionResult<AppUser>> GetUser(int id) // we are going to be returning a type of action result. 
         {
