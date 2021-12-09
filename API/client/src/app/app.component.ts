@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { User } from './_models/user';
+import { AccountService } from './_services/account.service';
 
 
 @Component({
@@ -12,18 +14,15 @@ export class AppComponent implements OnInit {
   title = 'The Dating App';
   users: any;
 
-  constructor(private http: HttpClient) { } // declare thing we are about to inject as a private or public variable.
+  constructor(private accountService: AccountService) { } // declare thing we are about to inject as a private or public variable.
   
   ngOnInit() {
-    this.getUsers();
+    this.setCurrentUser();
   }
 
-  public getUsers()
+  setCurrentUser()
   {
-    this.http.get('https://localhost:5001/api/Users').subscribe(response => {
-      this.users = response;
-    }, error => {
-      console.log(error);
-    })
+    const user: User = JSON.parse(localStorage.getItem('user'));
+    this.accountService.setCurrentUser(user);
   }
 }

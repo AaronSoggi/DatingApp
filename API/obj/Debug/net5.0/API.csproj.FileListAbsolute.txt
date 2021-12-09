@@ -137,3 +137,4 @@ C:\Users\Aaron\source\repos\DatingApp\api\obj\Debug\net5.0\ref\API.dll
 C:\Users\Aaron\source\repos\DatingApp\api\obj\Debug\net5.0\API.pdb
 C:\Users\Aaron\source\repos\DatingApp\api\obj\Debug\net5.0\API.genruntimeconfig.cache
 C:\Users\Aaron\source\repos\DatingApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Aaron\source\repos\DatingApp\api\obj\Debug\net5.0\API.csproj.CopyComplete

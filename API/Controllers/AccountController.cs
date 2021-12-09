@@ -19,6 +19,11 @@ namespace API.Controllers
         private readonly DataContext _context;
         private readonly ITokenService _tokenService;
 
+        public async Task<ActionResult<bool>> Userexisting(string username) 
+        {
+            return await _context.Users.AnyAsync(x => x.UserName == username);
+        }
+
         public AccountController(DataContext context, ITokenService tokenService)
         {
             _tokenService = tokenService;

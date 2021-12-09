@@ -1,4 +1,4 @@
-﻿using API.Entities;
+﻿                                                                                                                                                                                                                                                                                                   using API.Entities;
 using API.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -22,7 +22,7 @@ namespace API.Services
 
         public string CreateToken(AppUser user)
         {
-            var claims = new List<Claim>
+            var claims = new List<Claim>()
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.UserName)
             };
