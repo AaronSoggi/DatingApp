@@ -1,16 +1,18 @@
 <nav class="navbar-default">
-  <a class ="navbar-brand" href="#" style="font-size:30px">Dating app</a>
-  <ul class="links" *ngIf ="accountService.currentUser$ | async">    
-    <li>
-      <a href="#">Home</a>
-      <a href="#">Matches</a>
-      <a href="#">Settings</a>
-      <a href="#" (click)="logout()">Logout</a>
-    </li>
+  <a class ="navbar-brand" routerLink ="/" routerLinkActive ="active" style="font-size:30px">Dating app</a>
+  <ul class="links">
+    <ng-container *ngIf="accountService.currentUser$ | async">
+      <li>
+        <a routerLink="/members" routerLinkActive="link-active">Matches</a>
+        <a routerLink="/lists" routerLinkActive="active">Lists</a>
+        <a routerLink="/messages" routerLinkActive="active">Messages</a>
+      </li>
+    </ng-container>
+
   </ul>
 
-  <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-    <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+  <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+    <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase }}</a>
     <div class="dropdown-menu" *dropdownMenu>
       <a class="dropdown-item">Edit profile</a>
       <div class="dropdown-divider"></div>
@@ -32,6 +34,6 @@
            class="form-control mr-sm-2"
            type="text"
            placeholder="Password">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
   </form>
 </nav>
